@@ -15,7 +15,7 @@ class CreateCurriculaTable extends Migration
     {
         Schema::create('curricula', function (Blueprint $table) {
             $table->id();
-            $table->integer('ip');
+            $table->bigInteger('ip');
             $table->string('nome');
             $table->string('email');
             $table->bigInteger('telefone');
