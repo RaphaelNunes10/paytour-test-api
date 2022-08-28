@@ -4,7 +4,7 @@
             Olá {{ $curriculum.nome }},
         </h1>
         <p>
-            Aqui estão as informações do seu curriculum cadastrado:     
+            Aqui estão as informações do seu curriculum cadastrado:    
         </p>
 
         <p>
