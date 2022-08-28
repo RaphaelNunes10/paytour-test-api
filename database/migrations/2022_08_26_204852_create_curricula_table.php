@@ -14,14 +14,14 @@ class CreateCurriculaTable extends Migration
     public function up()
     {
         Schema::create('curricula', function (Blueprint $table) {
-            $table->id();
-            $table->bigInteger('ip');
+            $table->id()->autoIncrement();
+            $table->string('ip');
             $table->string('nome');
             $table->string('email');
-            $table->bigInteger('telefone');
+            $table->string('telefone');
             $table->string('cargo');
             $table->string('escolaridade');
-            $table->string('obs');
+            $table->string('obs')->nullable(true);
             $table->binary('arquivo');
             $table->timestamps();
         });

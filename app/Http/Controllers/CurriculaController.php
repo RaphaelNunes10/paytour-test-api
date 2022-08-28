@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Mail;
-use App\Curriculum;
+use App\Models\Curriculum;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 

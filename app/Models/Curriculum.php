@@ -10,13 +10,13 @@ class Curriculum extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name',
-        'category_id',
-        'object',
-        'material',
-        'images',
-        'user_id',
-        'description',
-        'tags'
+        'ip',
+        'nome',
+        'email',
+        'telefone',
+        'cargo',
+        'escolaridade',
+        'obs',
+        'arquivo'
     ];
 }
