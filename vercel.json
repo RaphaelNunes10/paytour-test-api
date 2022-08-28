@@ -3,10 +3,6 @@
     "functions": {
         "api/index.php": { "runtime": "vercel-php@0.5.2" }
     },
-    "routes": [{
-        "src": "/(.*)",
-        "dest": "/api/index.php"
-    }],
     "env": {
         "APP_NAME": "Paytour Test API",
         "APP_ENV": "production",
