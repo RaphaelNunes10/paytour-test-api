@@ -2,7 +2,7 @@
     "version": 2,
     "functions": {
         "api/index.php": { "runtime": "vercel-php@0.5.2" },
-        "api/functions.js": { "memory": 1024,
+        "api/allowCors.js": { "memory": 1024,
         "maxDuration": 10 }
     },
     "routes": [{
