@@ -32,7 +32,7 @@ class CurriculumFactory extends Factory
             'cargo' => $faker->jobTitle(),
             'escolaridade' => $faker->randomElement($array = array ("Fundamental","Médio","Superior","Pós-graduado","Mestrado","Doutorado")),
             'obs' => $faker->realText(),
-            'arquivo' => "data:application/pdf;base64,TWFueSBoYW5kcyBtYWtlIGxpZ2h0IHdvcmsu",
+            'arquivo' => json_encode(["nome" => "teste.pdf", "base64" => "TWFueSBoYW5kcyBtYWtlIGxpZ2h0IHdvcmsu", "mime" => 'application/pdf']),
         ];
     }
 }

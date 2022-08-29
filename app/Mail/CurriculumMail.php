@@ -13,6 +13,7 @@ class CurriculumMail extends Mailable
     use Queueable, SerializesModels;
 
     public $curriculum;
+    public $primeiroNome;
 
     /**
      * Create a new message instance.
@@ -31,8 +32,11 @@ class CurriculumMail extends Mailable
      */
     public function build()
     {
+        $this->primeiroNome = explode(' ', $this->curriculum->nome, 2)[0];
+
         return $this->view('emails.mail')
                 ->with([
+                    'primeiroNome' => $this->primeiroNome,
                     'nome' => $this->curriculum->nome,
                     'email' => $this->curriculum->email,
                     'telefone' => $this->curriculum->telefone,
@@ -40,8 +44,6 @@ class CurriculumMail extends Mailable
                     'escolaridade' => $this->curriculum->escolaridade,
                     'obs' => $this->curriculum->obs,
                 ])
-                ->attach($this->curriculum->arquivo->getRealPath(), $this->curriculum->arquivo->getClientOriginalName(), [
-                    'mime' => $this->curriculum->arquivo->getClientMimeType(),
-                ]);
+                ->attachData(base64_decode($this->curriculum->arquivo["base64"]), $this->curriculum->arquivo["nome"], ['mime' => $this->curriculum->arquivo["mime"],]);
     }
 }

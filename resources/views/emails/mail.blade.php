@@ -1,7 +1,7 @@
 <body>
     <div>
         <h1 style="color: red">
-            Olá {{ $nome }},
+            Olá {{ $primeiroNome }},
         </h1>
         <p>
             Aqui estão as informações do seu curriculum cadastrado:    

@@ -7,7 +7,7 @@ use App\Models\Curriculum;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-use App\Mail\CurriculumMail as CurriculumMail;
+use App\Mail\CurriculumMail;
 
 class CurriculaController extends Controller
 {
@@ -29,7 +29,7 @@ class CurriculaController extends Controller
             'arquivo' => $request->input('arquivo'),
         ]);
 
-        // Mail::to($request->input('email'))->send(new CurriculumMail($request->input()));
+        Mail::to($request->input('email'))->send(new CurriculumMail($curriculum));
 
         return $curriculum;
     }
