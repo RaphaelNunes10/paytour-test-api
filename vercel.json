@@ -1,11 +1,12 @@
 {
     "version": 2,
     "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.5.2" }
+        "api/index.php": { "runtime": "vercel-php@0.5.2" },
+        "api/functions.js": { "runtime": "vercel-php@0.5.2" }
     },
-    "rewrites": [{
-        "source": "/(.*)",
-        "destination": "/api/index.php"
+    "routes": [{
+        "src": "/(.*)",
+        "dest": "/api/index.php"
     }],
     "env": {
         "APP_NAME": "Paytour Test API",
@@ -23,16 +24,5 @@
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie"
-    },
-    "headers": [
-        {
-          "source": "/api/(.*)",
-          "headers": [
-            { "key": "Access-Control-Allow-Credentials", "value": "true" },
-            { "key": "Access-Control-Allow-Origin", "value": "*" },
-            { "key": "Access-Control-Allow-Methods", "value": "GET,OPTIONS,PATCH,DELETE,POST,PUT" },
-            { "key": "Access-Control-Allow-Headers", "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" }
-          ]
-        }
-      ]
+    }
 }
