@@ -29,7 +29,7 @@ class CurriculaController extends Controller
             'arquivo' => $request->input('arquivo'),
         ]);
 
-        Mail::to($request->input('email'))->send(new CurriculumMail($request->input()));
+        // Mail::to($request->input('email'))->send(new CurriculumMail($request->input()));
 
         return $curriculum;
     }
