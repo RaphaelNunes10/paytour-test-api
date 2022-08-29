@@ -170,7 +170,7 @@ fetch(url, {
             <pre><code class="language-http">content-type: text/html; charset=UTF-8
 cache-control: no-cache, private
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 57
+x-ratelimit-remaining: 59
 vary: Origin
  </code></pre>
         </details>         <pre>
@@ -265,7 +265,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 56
+x-ratelimit-remaining: 58
 vary: Origin
  </code></pre>
         </details>         <pre>
@@ -846,14 +846,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PATCH \
-    "http://localhost/api/curriculum/11" \
+    "http://localhost/api/curriculum/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/curriculum/11"
+    "http://localhost/api/curriculum/1"
 );
 
 const headers = {
@@ -915,7 +915,7 @@ fetch(url, {
                 <input type="number"
                name="curriculum_id"
                data-endpoint="PATCHapi-curriculum--curriculum_id-"
-               value="11"
+               value="1"
                data-component="url" hidden>
     <br>
 <p>The ID of the curriculum.</p>
@@ -935,14 +935,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/curriculum/11" \
+    "http://localhost/api/curriculum/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/curriculum/11"
+    "http://localhost/api/curriculum/1"
 );
 
 const headers = {
@@ -1004,7 +1004,7 @@ fetch(url, {
                 <input type="number"
                name="curriculum"
                data-endpoint="DELETEapi-curriculum--curriculum-"
-               value="11"
+               value="1"
                data-component="url" hidden>
     <br>
 <p>The curriculum.</p>
