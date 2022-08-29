@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Test
+
+Route::get('/test', function() {
+    return 'OK';
+});
+
 // Curricula
 
 Route::get('curricula', "App\Http\Controllers\curriculaController@index");
