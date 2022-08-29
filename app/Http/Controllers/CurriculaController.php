@@ -7,6 +7,8 @@ use App\Models\Curriculum;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+use App\Mail\CurriculumMail as CurriculumMail;
+
 class CurriculaController extends Controller
 {
     public function index()
@@ -27,7 +29,7 @@ class CurriculaController extends Controller
             'arquivo' => $request->input('arquivo'),
         ]);
 
-        sendEmail();
+        Mail::to($request->input('email'))->send(new CurriculumMail($request->input()));
 
         return $curriculum;
     }
@@ -51,16 +53,5 @@ class CurriculaController extends Controller
     public function remove(Curricula $curriculum)
     {
         $curriculum->delete();
-    }
-
-    private function sendEmail(Request $request, $id)
-    {
-        $curriculum = Curriculum::findOrFail($id);
- 
-        Mail::send('mail', ['Curriculum' => $curriculum], function ($message) use ($curriculum) {
-            $message->from('redhiltsolutions@gmail.com', 'Red Hilt - Teste Paytour');
-            $message->to($curriculum->email)->subject('Seu Curriculum do Teste Paytour');
-            $message->attach($curriculum->arquivo);
-        });
     }
 }

@@ -1,7 +1,7 @@
 <body>
     <div>
         <h1 style="color: red">
-            Olá {{ $curriculum.nome }},
+            Olá {{ $nome }},
         </h1>
         <p>
             Aqui estão as informações do seu curriculum cadastrado:    
@@ -10,16 +10,16 @@
         <p>
             <ul>
                 <li>
-                    <strong>Nome:</strong> {{ $curriculum.nome }}
+                    <strong>Nome:</strong> {{ $nome }}
                 </li>
                 <li>
-                    <strong>Telefone:</strong> {{ $curriculum.telefone }}
+                    <strong>Telefone:</strong> {{ $telefone }}
                 </li>
                 <li>
-                    <strong>Cargo:</strong> {{ $curriculum.cargo }}
+                    <strong>Cargo:</strong> {{ $cargo }}
                 </li>
                 <li>
-                    <strong>Escolaridade:</strong> {{ $curriculum.escolaridade }}
+                    <strong>Escolaridade:</strong> {{ $escolaridade }}
                 </li>
             </ul>
         </p>
@@ -27,7 +27,7 @@
         <p>
             <strong>Observações:</strong>
             <br/>
-            {{ $curriculum.obs }}
+            {{ $obs }}
         </p>
     </div>
 </body>
