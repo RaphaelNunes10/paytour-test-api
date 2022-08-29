@@ -22,7 +22,7 @@ class CreateCurriculaTable extends Migration
             $table->string('cargo');
             $table->string('escolaridade');
             $table->string('obs')->nullable(true);
-            $table->binary('arquivo');
+            $table->string('arquivo');
             $table->timestamps();
         });
     }

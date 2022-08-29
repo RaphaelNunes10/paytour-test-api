@@ -19,4 +19,8 @@ class Curriculum extends Model
         'obs',
         'arquivo'
     ];
+
+    // protected $casts = [
+    //     'arquivo' => Base64::class,
+    // ];
 }

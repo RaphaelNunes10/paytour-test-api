@@ -26,7 +26,3 @@ Route::get('curricula', "App\Http\Controllers\curriculaController@index");
 Route::post('curriculum/register', "App\Http\Controllers\curriculaController@store");
 Route::patch('curriculum/{curriculum}', "App\Http\Controllers\curriculaController@update");
 Route::delete('curriculum/{curriculum}', "App\Http\Controllers\curriculaController@remove");
-
-// Mails
-
-Route::get('/send/email', 'MailController@mail');
